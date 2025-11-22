@@ -125,7 +125,7 @@
   .left{
     flex:1;
     padding:20px 18px;
-    background: linear-gradient(180deg, rgba(0,0,0,0.70), rgba(0,0,0,0.58));
+    background: linear-gradient(180deg, rgba(0,0,0,0.65), rgba(0,0,0,0.52)); /* MÁS TRANSLÚCIDO */
     border:1px solid rgba(255,255,255,.06);
     border-radius:14px;
     box-shadow:var(--shadow);
@@ -133,7 +133,7 @@
     display:flex;
     flex-direction:column;
     gap:12px;
-    color:white; /* ← FIX TEXTO QUE APARECÍA NEGRO */
+    color:white;
   }
 
   .left .logo img{
@@ -148,13 +148,13 @@
     font-size:34px;
     font-weight:700;
     text-shadow:0 4px 18px #000;
-    color:white; /* ← FIX */
+    color:white;
   }
 
   .sub{
     margin:0;
     font-size:15px;
-    color:white; /* ← FIX */
+    color:white;
   }
 
   .div-line{
@@ -189,8 +189,8 @@
     gap:10px;
     margin-top:6px;
     text-align:left;
-    max-height:270px;      /* ← SCROLL INTERNO */
-    overflow-y:auto;       /* ← SCROLL SOLO EN SERVICIOS */
+    max-height:270px;
+    overflow-y:auto;
     padding-right:6px;
   }
 
@@ -198,7 +198,7 @@
     display:grid;
     grid-template-columns:44px 1fr;
     gap:12px;
-    background:rgba(255,255,255,.05);
+    background:rgba(0,0,0,0.35);
     border:1px solid rgba(255,255,255,.08);
     padding:10px 12px;
     border-radius:12px;
@@ -224,8 +224,8 @@
   }
 
   .title-box{
-    background:rgba(0,0,0,.55);
-    border:1px solid rgba(255,255,255,.05);
+    background:rgba(0,0,0,0.40);
+    border:1px solid rgba(255,255,255,.08);
     padding:14px;
     border-radius:14px;
     box-shadow:0 8px 20px rgba(0,0,0,.28);
@@ -235,13 +235,13 @@
     font-size:28px;
     margin:0;
     font-weight:700;
-    color:white; /* ← FIX */
+    color:white;
   }
 
   .subtitle{
     font-size:14px;
     margin:6px 0 0;
-    color:white; /* ← FIX */
+    color:white;
   }
 
   .btns{
@@ -293,9 +293,26 @@
       overflow:auto;
       position:static;
     }
+
     .hero{
       background-image:url("img/portada_celular.png");
     }
+
+    /* MÁS TRANSPARENTE EN CELULAR */
+    .left{
+      background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.30));
+      backdrop-filter:blur(3px);
+    }
+
+    .title-box{
+      background:rgba(0,0,0,0.32);
+      border:1px solid rgba(255,255,255,0.10);
+    }
+
+    .svc{
+      background:rgba(0,0,0,0.30);
+    }
+
     .btns{
       grid-template-columns:1fr;
     }
