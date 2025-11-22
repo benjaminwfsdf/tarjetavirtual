@@ -121,12 +121,19 @@
     transform:rotateY(180deg);
   }
 
-  /* ===== LEFT PANEL ===== */
+  /* ⭐ PANEL TRASLÚCIDO (PC) ⭐ */
   .left{
     flex:1;
     padding:20px 18px;
-    background: linear-gradient(180deg, rgba(0,0,0,0.65), rgba(0,0,0,0.52)); /* MÁS TRANSLÚCIDO */
-    border:1px solid rgba(255,255,255,.06);
+
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,0.25),
+      rgba(0,0,0,0.10)
+    );
+    backdrop-filter:blur(6px);
+
+    border:1px solid rgba(255,255,255,.08);
     border-radius:14px;
     box-shadow:var(--shadow);
     text-align:center;
@@ -164,7 +171,6 @@
     max-width:220px;
   }
 
-  /* ===== BOTÓN VER SERVICIOS ===== */
   .flip-hint{
     display:inline-flex;
     align-items:center;
@@ -183,7 +189,7 @@
     color:var(--btn-purple);
   }
 
-  /* ===== SERVICES ===== */
+
   .services{
     display:grid;
     gap:10px;
@@ -198,7 +204,7 @@
     display:grid;
     grid-template-columns:44px 1fr;
     gap:12px;
-    background:rgba(0,0,0,0.35);
+    background:rgba(0,0,0,0.30);
     border:1px solid rgba(255,255,255,.08);
     padding:10px 12px;
     border-radius:12px;
@@ -224,7 +230,7 @@
   }
 
   .title-box{
-    background:rgba(0,0,0,0.40);
+    background:rgba(0,0,0,0.35);
     border:1px solid rgba(255,255,255,.08);
     padding:14px;
     border-radius:14px;
@@ -272,6 +278,7 @@
   .btn-purple{ background:var(--btn-purple); }
   .btn-whatsapp{ background:var(--btn-whatsapp); }
 
+
   /* ===== FOOTER ===== */
   .infobar{
     position:fixed;
@@ -298,19 +305,21 @@
       background-image:url("img/portada_celular.png");
     }
 
-    /* MÁS TRANSPARENTE EN CELULAR */
     .left{
-      background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.30));
-      backdrop-filter:blur(3px);
+      background:linear-gradient(
+        180deg,
+        rgba(0,0,0,0.20),
+        rgba(0,0,0,0.08)
+      );
+      backdrop-filter:blur(4px);
     }
 
     .title-box{
-      background:rgba(0,0,0,0.32);
-      border:1px solid rgba(255,255,255,0.10);
+      background:rgba(0,0,0,0.28);
     }
 
     .svc{
-      background:rgba(0,0,0,0.30);
+      background:rgba(0,0,0,0.25);
     }
 
     .btns{
