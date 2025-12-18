@@ -305,6 +305,28 @@
     background:rgba(0,0,0,.75);
     border-top:1px solid rgba(255,255,255,.05);
     font-size:13px;
+    color:#cfcfcf;
+  }
+
+  /* Estilo para el enlace de crédito */
+  .infobar .credit-link {
+    color: #ffbc49;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(255, 188, 73, 0.1);
+  }
+  
+  .infobar .credit-link:hover {
+    background: rgba(255, 188, 73, 0.2);
+    transform: translateY(-1px);
+    text-decoration: underline;
+  }
+  
+  .infobar .credit-link:active {
+    transform: translateY(0);
   }
 
   /* ============================
@@ -345,6 +367,13 @@
 
     .btns{
       grid-template-columns:1fr;
+    }
+    
+    .infobar {
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+      padding: 12px 14px;
     }
   }
 </style>
@@ -466,7 +495,7 @@
 <!-- FOOTER -->
 <div class="infobar">
   <span>© <span id="year"></span> Mecánica Walter Uriol</span>
-  <span>Hecho por Benjamín González</span>
+  <span>Hecho por <a href="https://tarjetavirtual-delta.vercel.app/" class="credit-link" target="_blank" rel="noopener">Benjamín González</a></span>
 </div>
 
 <!-- MODAL -->
